@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import CartContext from "../../store/cart-context";
-import Card from "../UI/Card";
 import Modal from "../UI/Modal";
 import styles from "./Cart.module.css";
 import CartItem from "./CartItem";
@@ -59,7 +58,7 @@ const Cart = (props) => {
     setOrderIsSubmiting(true);
     setCheckoutIsShown(false);
     cartCtx.clearCart();
-    const response = await fetch(url, {
+    await fetch(url, {
       method: "POST",
       body: JSON.stringify({
         userData: userData,

@@ -1,9 +1,6 @@
-// import { useState } from "react";
 import useInput from "./use-input";
 
 import styles from "./Checkout.module.css";
-
-
 
 const Checkout = (props) => {
   const nameData = useInput((value) => value.trim() !== "");
@@ -96,7 +93,11 @@ const Checkout = (props) => {
 
   return (
     <form className={styles.form} onSubmit={confirmHandler}>
-      <div className={`${styles.control} ${enteredNameIsInvalid ? styles.invalid : ''  } ` }>
+      <div
+        className={`${styles.control} ${
+          enteredNameIsInvalid ? styles.invalid : ""
+        } `}
+      >
         <label htmlFor="name">Your Name</label>
         <input
           type={"text"}
@@ -107,7 +108,11 @@ const Checkout = (props) => {
         />
         {enteredNameIsInvalid && <p>Enter Name</p>}
       </div>
-      <div className={`${styles.control} ${enteredStreetIsInvalid ? styles.invalid : ''  } ` }>
+      <div
+        className={`${styles.control} ${
+          enteredStreetIsInvalid ? styles.invalid : ""
+        } `}
+      >
         <label htmlFor="street">Street</label>
         <input
           type={"text"}
@@ -118,7 +123,11 @@ const Checkout = (props) => {
         />
         {enteredStreetIsInvalid && <p>Enter Street</p>}
       </div>
-      <div className={`${styles.control} ${enteredPostalIsInvalid ? styles.invalid : ''  } ` }>
+      <div
+        className={`${styles.control} ${
+          enteredPostalIsInvalid ? styles.invalid : ""
+        } `}
+      >
         <label htmlFor="postal">Postal(Pin) Code </label>
         <input
           type={"text"}
@@ -130,7 +139,11 @@ const Checkout = (props) => {
         />
         {enteredPostalIsInvalid && <p>Enter Valid Pin-Code 6-digit</p>}
       </div>
-      <div className={`${styles.control} ${enteredCityIsInvalid ? styles.invalid : ''  } ` }>
+      <div
+        className={`${styles.control} ${
+          enteredCityIsInvalid ? styles.invalid : ""
+        } `}
+      >
         <label htmlFor="city">City</label>
         <input
           type={"text"}
@@ -145,9 +158,7 @@ const Checkout = (props) => {
         <button onClick={cancleCheckoutHandler} type="button">
           Cancle
         </button>
-        <button   className={styles.submit} >
-          Confirm
-        </button>
+        <button className={styles.submit}>Confirm</button>
       </div>
     </form>
   );
