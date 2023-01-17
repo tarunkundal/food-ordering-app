@@ -1,22 +1,50 @@
 .meal {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.description {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width:10rem
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.25rem;
+}
+
+.image img {
+  border-radius: 20%;
+  height: 4rem;
+  width: 4rem;
+}
+
+@media (min-width: 768px) {
+  .image img {
+    height: 7rem;
+    width: 7rem;
   }
-  
-  .meal h3 {
-    margin: 0 0 0.25rem 0;
+  .description{
+    width: 20rem;
   }
-  
-  .description {
-    font-style: italic;
+}
+@media (max-width:480px){
+  .description{
+    width: 4rem;
   }
-  
-  .price {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #ad5502;
-    font-size: 1.25rem;
+  .image img{
+    /* border: 2px solid red; */
+    margin-right: 1em;
   }
+ 
+}

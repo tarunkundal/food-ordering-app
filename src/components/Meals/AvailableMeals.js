@@ -56,6 +56,7 @@ const AvailableMeals = () => {
           name: data[key].name,
           descripition: data[key].descripition,
           price: data[key].price,
+          image: data[key].imgUrl,
           id: key,
         });
       }
@@ -94,6 +95,7 @@ const AvailableMeals = () => {
         descripition={meal.descripition}
         price={meal.price}
         id={meal.id}
+        image = {meal.image}
       />
     );
   });
