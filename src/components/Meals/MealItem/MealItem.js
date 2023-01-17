@@ -32,7 +32,7 @@ const MealItem = (props) => {
           <div className={styles.price}>{price}</div>
         </div>
         <div>
-          <div className={styles.image} > {<img src={`${props.image}`} />} </div>
+          <div className={styles.image} > {<img src={`${props.image}`} alt='' />} </div>
         </div>
 
         <div>
