@@ -16,31 +16,33 @@ const MealItem = (props) => {
     });
   };
 
-  const price = `$${props.price}`;
-  const length = props.descripition.length 
+  const price = `₹${props.price}`;
+  const length = props.descripition.length;
   return (
     <>
-      {/* {props.mealsData.map((meal) => {
-        const price = `$${meal.price.toFixed(2)}`;
-        return ( */}
       <li className={styles.meal}>
         <div>
           <h3>{props.name}</h3>
 
-          <div className={styles.description}>{length<40 ? props.descripition : props.descripition.slice(0,20)+'...' }</div>
+          <div className={styles.description}>
+            {length < 40
+              ? props.descripition
+              : props.descripition.slice(0, 20) + "..."}
+          </div>
 
           <div className={styles.price}>{price}</div>
         </div>
         <div>
-          <div className={styles.image} > {<img src={`${props.image}`} alt='' />} </div>
+          <div className={styles.image}>
+            {" "}
+            {<img src={`${props.image}`} alt="" />}{" "}
+          </div>
         </div>
 
         <div>
           <MealItemForm id={props.id} onAddToCart={addToCartHandler} />
         </div>
       </li>
-      {/* );
-      })} */}
     </>
   );
 };

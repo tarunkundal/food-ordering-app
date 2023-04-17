@@ -10,9 +10,9 @@ const MealItemForm = (props) => {
     setInitialAmount(updatedMealsQuantity);
   };
 
-  const submitHandler = (e) => { 
+  const submitHandler = (e) => {
     e.preventDefault();
-    // console.log(initialAmount)
+
     const enteredAmount = initialAmount;
     const enteredAmountNumber = +enteredAmount;
 
